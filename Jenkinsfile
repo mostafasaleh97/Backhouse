@@ -1,7 +1,7 @@
 pipeline {
     agent { label 'jenkins-slave' }
 
-    } 
+     
     stages {
         stage('build') {
             steps {
@@ -14,6 +14,7 @@ pipeline {
                                 echo ${BUILD_NUMBER} > ../bakehouse-build-number.txt
                            """
                 }
+            }
             }
         }
         stage('deploy') {
